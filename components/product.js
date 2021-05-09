@@ -36,7 +36,9 @@ export default function Product({ metadata, price, seller, productId }) {
       <div className="ml-2 mr-2 mt-7 w-full">
         <div className="text-4xl text-gray-600">{productData.name}</div>
         <div className="mt-2 text-xl font-light text-gray-400 h-12">
-          {productData.description}
+          {productData.description.length > 65
+            ? productData.description.substring(0, 65) + "..."
+            : productData.description}
         </div>
         <div className="flex mt-6">
           <Image src="/matic.png" width={25} height={25} layout="fixed" />
