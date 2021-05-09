@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="flex">
+      <div className="flex flex-wrap w-full">
         {products.map((product) => (
           <div className="w-1/2 p-6">
             <Product
